@@ -1,101 +1,127 @@
-import Image from "next/image";
+import Card from "@/app/components/recent-post-card";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      {/* Hero Section */}
+      <section className="hero-section">
+        <div className="container">
+          <div className="main">
+            <div className="text-container">
+              <h1> Hi&#44; I am Arsalan&#44; Generative AI Eng</h1>
+              <p>
+                A certified Cloud-Native Generative AI Engineer with expertise
+                in harnessing the power of AI and cloud technologies to build
+                innovative, scalable solutions.
+              </p>
+              <button> Download Resume </button>
+            </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div>
+              <div className="hero-image">
+                <img
+                  src="/profile.jpeg"
+                  alt="Error!"
+                  width={300}
+                  height={300}
+                ></img>
+              </div>
+            </div>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </section>
+      {/* Hero Section Ends Here! */}
+
+      {/* Recent Post Section */}
+      <section className="recent-post">
+        <div className="container">
+          <div className="container-main">
+            <div className="heading">
+              <h3> Recent Post </h3>
+              <button> View all </button>
+            </div>
+
+            <div className="card-parent">
+              <Card />
+              <Card />
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Recent Post Section Ends Here! */}
+
+      {/* Feature Section */}
+      <section className="featured-section">
+
+        <div className="container">
+          
+          <div className="feature-main">
+
+
+            <div className="main-heading">
+              <h3> Featured Works </h3>
+            </div>
+
+          <div className="feature-card-parent">
+            <div className="feature-card">
+              <img src="./img1.png" alt="Error" width={245} height={180} />
+              <div className="card-content">
+                <h2> Designing Dashboards </h2>
+                <div className="badge-parent">
+                  <div className="feature-badge">
+                    <p> 2020 </p>
+                  </div>
+                  <p> Dashboard </p>
+                </div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis voluptatibus fugiat, consectetur, doloremque
+                  obcaecati voluptates facilis atque soluta ad quasi, in quod
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-card">
+              <img src="./img2.png" alt="Error" width={245} height={180} />
+              <div className="card-content">
+                <h2> Designing Dashboards </h2>
+                <div className="badge-parent">
+                  <div className="feature-badge">
+                    <p> 2020 </p>
+                  </div>
+                  <p> Dashboard </p>
+                </div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis voluptatibus fugiat, consectetur, doloremque
+                  obcaecati voluptates facilis atque soluta ad quasi, in quod
+                </p>
+              </div>
+            </div>
+
+            <div className="feature-card">
+              <img src="./img3.png" alt="Error" width={245} height={180} />
+              <div className="card-content">
+                <h2> Designing Dashboards </h2>
+                <div className="badge-parent">
+                  <div className="feature-badge">
+                    <p> 2020 </p>
+                  </div>
+                  <p> Dashboard </p>
+                </div>
+                <p>
+                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  Blanditiis voluptatibus fugiat, consectetur, doloremque
+                  obcaecati voluptates facilis atque soluta ad quasi, in quod
+                </p>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </section>
+      {/* Feature Section Ends Here! */}
+    </>
   );
 }
